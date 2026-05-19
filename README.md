@@ -1,6 +1,6 @@
 # @xiaokaixuan/random
 
-一个极简的伪随机数生成器（PRNG），支持自定义种子，不传种子则自动使用 UUID作为种子。
+一个极简的伪随机数生成器（PRNG），支持自定义种子，不传种子则自动使用 UUID 作为种子。
 
 ## 安装
 
@@ -14,8 +14,10 @@ npm install @xiaokaixuan/random
 
 ## 快速开始
 
+### 前端项目（Vite / Webpack 等）
+
 ```js
-const Random = require("@xiaokaixuan/random");
+import Random from "@xiaokaixuan/random";
 
 // 不传种子，自动使用 UUID
 const r1 = new Random();
@@ -25,6 +27,16 @@ console.log(r1.float()); // 0.423...
 const r2 = new Random("my-seed");
 console.log(r2.int(1, 100)); // 55
 console.log(r2.bool()); // false
+```
+
+### Node.js 项目
+
+```js
+const Random = require("@xiaokaixuan/random");
+
+const r = new Random("hello");
+console.log(r.range(0, 10)); // 3.217...
+console.log(r.pick(["a", "b", "c"])); // 'b'
 ```
 
 ## API
@@ -122,6 +134,7 @@ r.float(); // 0.1309...  ← 与第一次相同
 - **自动种子**：不传种子时使用 `uuid` 生成随机种子
 - **私有方法保护**：内部方法（`_hashSeed`、`_next`）使用 Symbol 实现真正的私有，实例无法调用
 - **TypeScript 支持**：包含完整的类型定义文件
+- **双模式导出**：同时支持 `import`（ESM）和 `require`（CJS），前端和 Node.js 项目均可使用
 - **运行时仅依赖 `uuid`**：轻量，安装即用
 
 ## 算法

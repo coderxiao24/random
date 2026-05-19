@@ -1,5 +1,5 @@
-const assert = require("assert");
-const Random = require("./index.js");
+import assert from "assert";
+import Random from "./index.js";
 
 let passed = 0;
 let failed = 0;

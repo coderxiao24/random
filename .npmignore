@@ -1,8 +1,8 @@
 # 测试文件
 test.js
 
-# 源码（构建后的 dist/index.js 才是入口）
-index.js
+# 构建配置（不需要发布）
+rollup.config.mjs
 
 # 开发依赖
 node_modules

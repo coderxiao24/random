@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+import { v4 as uuidv4 } from "uuid";
 
 // 私有方法，使用 Symbol 确保外部无法直接访问
 const _hashSeed = Symbol("hashSeed");
@@ -121,4 +121,4 @@ class Random {
   }
 }
 
-module.exports = Random;
+export default Random;

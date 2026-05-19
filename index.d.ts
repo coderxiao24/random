@@ -56,4 +56,4 @@ declare class Random {
   reset(): void;
 }
 
-export = Random;
+export default Random;
