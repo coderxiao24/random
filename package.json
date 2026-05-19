@@ -1,6 +1,6 @@
 {
   "name": "@xiaokaixuan/random",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个极简的伪随机数生成器，支持自定义种子",
   "main": "dist/index.js",
   "types": "index.d.ts",
