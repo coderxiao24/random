@@ -22,6 +22,14 @@
   ],
   "author": "xiaokaixuan <xiaokaixuan24@163.com> (https://xiaokaixuan.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderxiao24/random.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coderxiao24/random/issues"
+  },
+  "homepage": "https://github.com/coderxiao24/random#readme",
   "engines": {
     "node": ">=10.0.0"
   },

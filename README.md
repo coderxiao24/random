@@ -8,6 +8,10 @@
 npm install @xiaokaixuan/random
 ```
 
+## 仓库
+
+[https://github.com/coderxiao24/random](https://github.com/coderxiao24/random)
+
 ## 快速开始
 
 ```js
