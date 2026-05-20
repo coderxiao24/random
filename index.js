@@ -38,9 +38,10 @@ class Random {
    * @returns {number}
    */
   [_next]() {
-    // 参数来自 Numerical Recipes
-    this._state = (this._state * 1664525 + 1013904223) & 0x7fffffff;
-    return this._state / 0x7fffffff;
+    // 参数来自 Numerical Recipes，模数为 2^32
+    // >>> 0 将结果转换为无符号 32 位整数（相当于 mod 2^32）
+    this._state = (this._state * 1664525 + 1013904223) >>> 0;
+    return this._state / 0x100000000; // 除以 2^32，得到 [0, 1) 范围
   }
 
   /**
